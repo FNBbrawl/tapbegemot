@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапалка 👾</title>
+    <style>
+        body {
+            background-color: #cc99cc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .tap-area {
+            font-size: 100px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .counter {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">Тапов: <span id="tap-count">0</span></div>
+    <div class="tap-area" onclick="incrementCounter()">👾</div>
+
+    <script>
+        let tapCount = 0;
+
+        function incrementCounter() {
+            tapCount++;
+            document.getElementById('tap-count').textContent = tapCount;
+        }
+    </script>
+</body>
+</html>
